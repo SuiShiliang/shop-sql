@@ -6,6 +6,9 @@ alter table USER_T
 alter table USER_T
   add constraint user_image_id_fk foreign key (IMAGE_ID)
   references images_t (IMAGE_ID);
+alter table USER_T
+  add constraint user_role_id_fk foreign key (ROLE_ID)
+  references role_t (ROLE_ID);
 --ађСа
 create sequence user_seq;         
 

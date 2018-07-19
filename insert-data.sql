@@ -1,6 +1,9 @@
 -----User_t用户表
 insert into user_t(user_id,user_name,user_password)values(user_seq.nextval,'大伟','123456');
-insert into user_t(user_id,user_name,user_password,sex,age,image_id,role_id)values(user_seq.nextval,'小二','123456','男',20,1,6);
+insert into user_t
+  (user_id, user_name, user_password, sex, age, image_id, role_id)
+values
+  (user_seq.nextval, '小二', '123456', '男', 20, 1, 6);
 
 -----oprator_t管理员表
 insert into oprator_t(oprator_id,oprator_name,oprator_disable,role_id)values(oprator_seq.nextval,'NiuDa',0,7);

@@ -39,3 +39,9 @@ create table images_t(
        image_url varchar(256),
        image_discription varchar(256)
 );
+-----登录注销时间管理表
+create table user_login_logout_time_t(
+       user_id number ,
+       login_time date,
+       logout_time date
+);

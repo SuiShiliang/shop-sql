@@ -58,3 +58,8 @@ alter table IMAGES_T
   
 --序列
 create sequence IMAGES_seq; 
+
+-----登录注销时间管理表
+alter table USER_LOGIN_LOGOUT_TIME_T
+  add constraint USER_TIME_USER_ID_FK foreign key (USER_ID)
+  references USER_T (USER_ID);

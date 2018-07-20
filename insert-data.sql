@@ -86,3 +86,13 @@ insert into images_t
   (image_id, image_url)
 values
   (images_seq.nextval, 'images/20180717135900.jpg');
+-----登录注销时间管理表
+insert into user_login_logout_time_t
+  (user_time_id, user_id, login_time)
+values
+  (user_login_logout_time_seq.nextval, 2, sysdate);
+
+
+
+
+

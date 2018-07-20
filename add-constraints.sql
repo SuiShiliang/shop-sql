@@ -63,3 +63,5 @@ create sequence IMAGES_seq;
 alter table USER_LOGIN_LOGOUT_TIME_T
   add constraint USER_TIME_USER_ID_FK foreign key (USER_ID)
   references USER_T (USER_ID);
+--¥¥Ω®–Ú¡–
+create sequence user_login_logout_time_seq;

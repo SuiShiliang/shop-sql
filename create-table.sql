@@ -43,5 +43,6 @@ create table images_t(
 create table user_login_logout_time_t(
        user_id number ,
        login_time date,
-       logout_time date
+       logout_time date,
+       user_time_id NUMBER
 );

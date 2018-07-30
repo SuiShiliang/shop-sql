@@ -17,3 +17,17 @@ update user_login_logout_time_t ull
 update user_login_logout_time_t ull
    set ull.logout_time = sysdate
  where ull.user_time_id = 3;
+---修改商品信息
+update commodity_t co
+   set co.commodity_name = 'VIVOX5',
+       co.brand          = 'VIVO',
+       co.model          = 'X5',
+       co.os             = 'Android',
+       co.cpu            = '晓龙',
+       co.ram            = 4,
+       co.sc             = 64,
+       co.color          = '黑金色',
+       co.discription    = '',
+       co.price          = 3150
+ where co.commodity_id = 3;
+ 

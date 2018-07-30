@@ -7,7 +7,10 @@ values
 
 -----oprator_t管理员表
 insert into oprator_t(oprator_id,oprator_name,oprator_disable,role_id)values(oprator_seq.nextval,'NiuDa',0,7);
-
+insert into oprator_t
+  (oprator_id, oprator_name, oprator_disable, role_id)
+values
+  (oprator_seq.nextval, 'NiuDa', 0, 7);
 -----role_t角色表
 insert into role_t
   (role_id, role_name, role_discription)
@@ -91,7 +94,36 @@ insert into user_login_logout_time_t
   (user_time_id, user_id, login_time)
 values
   (user_login_logout_time_seq.nextval, 2, sysdate);
+-----商品表
 
+--添加商品
+insert into commodity_t
+  (commodity_id,
+   commodity_name,
+   brand,
+   model,
+   os,
+   cpu,
+   ram,
+   sc,
+   color,
+   discription,
+   price)
+values
+  (commodity_seq.nextval,
+   '华为荣耀4A',
+   '华为',
+   '荣耀4A',
+   'Android',
+   '',
+   2,
+   '8',
+   '白色',
+   '',
+   899);
+
+----购物车表
+insert into shopping_car_t (user_id, commodity_id, count) values (4, 2, 1);
 
 
 

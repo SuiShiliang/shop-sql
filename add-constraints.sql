@@ -65,3 +65,24 @@ alter table USER_LOGIN_LOGOUT_TIME_T
   references USER_T (USER_ID);
 --创建序列
 create sequence user_login_logout_time_seq;
+
+----商品表
+alter table COMMODITY_T
+  add constraint COMMODITY_ID_PK primary key (COMMODITY_ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255;
+  
+--创建序列
+create sequence COMMODITY_seq;
+
+----购物车
+alter table SHOPPING_CAR_T
+  add constraint SHOPPING_COMMODITY_ID_FK foreign key (COMMODITY_ID)
+  references COMMODITY_T (COMMODITY_ID);
+alter table SHOPPING_CAR_T
+  add constraint SHOPPING_USER_ID_FK foreign key (USER_ID)
+  references USER_T (USER_ID);
+
